@@ -186,14 +186,8 @@
        A arte horizontal ocupa a largura e também pode rolar verticalmente.
        Não usamos height:100vh nem cover, portanto nada é cortado. */
     @media (orientation: landscape) {
-      .poster-landscape {
-        display: none;
-      }
-
-      .poster-landscape {
-        display: block;
-      }
-
+    
+    
       .counter {
         top: 25%;
         width: min(70%, 760px);
@@ -227,16 +221,17 @@
   <main class="page">
 
     <!-- Retrato: arte vertical -->
-    <img
-      class="poster poster-portrait"
-      src="arte-vertical.png"
-      alt="Festa da Família Oliveira">
+   <picture>
+  <source
+    media="(orientation: landscape)"
+    srcset="arte-horizontal.png">
 
     <!-- Paisagem: arte horizontal -->
-    <img
-      class="poster poster-landscape"
-      src="arte-horizontal.png"
-      alt="Festa da Família Oliveira">
+     <img
+    class="poster"
+    src="arte-vertical.png"
+    alt="Festa da Família Oliveira">
+</picture>
 
     <section class="counter" aria-live="polite">
       <div id="days" class="days">--</div>
