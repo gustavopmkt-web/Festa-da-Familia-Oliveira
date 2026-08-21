@@ -183,7 +183,7 @@
     }
 
     /* PAISAGEM
-       A arte horizontal ocupa a largura e também pode rolar verticalmente.
+       A arte horizontal ocupa a largura e não pode rolar verticalmente.
        Não usamos height:100vh nem cover, portanto nada é cortado. */
     @media (orientation: landscape) {
       .poster-landscape {
@@ -228,7 +228,7 @@
 
     <!-- Retrato: arte vertical -->
     <img
-      class="poster poster-portrait"
+      class="poster poster-landscape"
       src="arte-vertical.png"
       alt="Festa da Família Oliveira">
 
